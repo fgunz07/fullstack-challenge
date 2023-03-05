@@ -12,11 +12,10 @@ services:
             - mysql
             - redis
         environment:
-            OPEN_WEATHER_MAP_KEY: "a5f3ec32bbad26b03cd2a5ca83cb6f13"
+            OPEN_WEATHER_MAP_KEY: ""
 
     mysql:
-        # image: mysql:8
-        image: mysql:latest
+        image: mysql:8
         ports:
             - "3306:3306"
         volumes:
@@ -26,8 +25,7 @@ services:
             MYSQL_ROOT_PASSWORD: root
 
     redis:
-        # image: redis:7
-        image: redis:alpine3.16
+        image: redis:7
         ports:
             - "6379:6379"
         volumes:
