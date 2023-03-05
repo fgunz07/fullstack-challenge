@@ -1,5 +1,7 @@
 # Fullstack Challenge
 
+[![Test](https://github.com/fgunz07/fullstack-challenge/actions/workflows/test.yml/badge.svg)](https://github.com/fgunz07/fullstack-challenge/actions/workflows/test.yml)
+
 ## Instructions
 Using Laravel and VueJS, create an application which shows the weather for a set of users.
 - Clone this repository. 
@@ -30,6 +32,7 @@ Using Laravel and VueJS, create an application which shows the weather for a set
 - Navigate to `/api` folder
 - Ensure version docker installed is active on host
 - Copy .env.example: `cp .env.example .env`
+- Set `env` `OPEN_WEATHER_MAP_KEY` from https://openweathermap.org/api
 - Start docker containers `docker compose up` (add `-d` to run detached)
 - Connect to container to run commands: `docker exec -it fullstack-challenge-app-1 bash`
   - Make sure you are in the `/var/www/html` path

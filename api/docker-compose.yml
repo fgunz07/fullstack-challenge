@@ -11,6 +11,8 @@ services:
         depends_on:
             - mysql
             - redis
+        environment:
+            OPEN_WEATHER_MAP_KEY: "a5f3ec32bbad26b03cd2a5ca83cb6f13"
 
     mysql:
         # image: mysql:8

@@ -71,7 +71,7 @@ class UserController extends Controller
             // Instance of openWeatherService
             // $service = $this->weatherService;
 
-            $user = Cache::remember("user:".$id, 3000, function() use ($id): mixed {
+            $user = Cache::remember("user:".$id, 1500, function() use ($id): mixed {
                 $u = User::findOrFail($id);
                 $data = $this->weatherService->getCurrentWeather($u->latitude, $u->longitude);
 

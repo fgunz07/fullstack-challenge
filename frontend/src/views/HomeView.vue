@@ -1,10 +1,7 @@
-<script setup lang="ts">
-// import ApiTest from "@/components/ApiTest.vue";
-import UserListComponent from "@/components/UserListComponent.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <main class="m-1">
-    <UserListComponent />
+  <main class="flex justify-center items-center text-gray-400">
+    <h1 class="h-full py-6">Contents will display here.</h1>
   </main>
 </template>
