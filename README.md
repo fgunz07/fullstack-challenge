@@ -1,6 +1,6 @@
 # Fullstack Challenge
 
-[![Test](https://github.com/fgunz07/fullstack-challenge/actions/workflows/test.yml/badge.svg)](https://github.com/fgunz07/fullstack-challenge/actions/workflows/test.yml)
+[![Test](https://github.com/fgunz07/fullstack-challenge/actions/workflows/test.yml/badge.svg?branch=main&event=push)](https://github.com/fgunz07/fullstack-challenge/actions/workflows/test.yml)
 
 ## Instructions
 Using Laravel and VueJS, create an application which shows the weather for a set of users.
