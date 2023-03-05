@@ -1,14 +1,11 @@
-<script setup lang="ts">
+<script setup>
 import { RouterLink, RouterView } from "vue-router";
 import UserListComponent from "@/components/UserListComponent.vue";
 import { storeToRefs } from "pinia";
 import { useUser } from "@/stores/user";
 
 const store = useUser();
-const {
-  userRequestErrorMsg,
-  userDetailsRequestErrorMsg,
-} = storeToRefs(store);
+const { userRequestErrorMsg, userDetailsRequestErrorMsg } = storeToRefs(store);
 </script>
 
 <template>

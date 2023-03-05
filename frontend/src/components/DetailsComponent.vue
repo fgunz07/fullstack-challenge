@@ -1,12 +1,11 @@
-<script lang="ts">
+<script>
 import { defineComponent } from "vue";
 import { useUser } from "@/stores/user";
 import { storeToRefs } from "pinia";
 
 export default defineComponent({
-  name: "DetailsVuew",
   computed: {
-    date(): Date {
+    date() {
       const today = Date.now();
 
       if (typeof this.userDetails.weather === "string") {
@@ -15,13 +14,13 @@ export default defineComponent({
 
       return new Date(this.userDetails.weather.dt);
     },
-    skyStatus(): string {
+    skyStatus() {
       return this.userDetails.weather.clouds.all > 50 ? "Cloudy" : "Clear";
     },
-    weatherIsObject(): boolean {
+    weatherIsObject() {
       return typeof this.userDetails.weather === "object";
     },
-    degreeCelsius(): number {
+    degreeCelsius() {
       return Math.round(this.userDetails.weather.main.temp - 273.15);
     },
   },

@@ -1,6 +1,13 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
 
+interface User {
+  name: string;
+  email: string;
+  lat: number;
+  lng: number;
+}
+
 const customFetch = async (url: string) =>
   await fetch(url, {
     headers: {
@@ -11,8 +18,15 @@ const customFetch = async (url: string) =>
 
 export const useUser = defineStore("user", () => {
   const url = "http://localhost";
-  const users = ref<{ data: object[] } | undefined>();
-  const userDetails = ref<object | undefined>();
+  const users = ref<{ data: User[] } | undefined>();
+  const userDetails = ref<
+    | {
+        data: User;
+        message: string;
+        weather: any;
+      }
+    | undefined
+  >();
 
   // Boolean users request status
   const usersRequestSuccess = ref<boolean>(false);

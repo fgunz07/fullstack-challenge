@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 import { useUser } from "@/stores/user";
 import { defineComponent } from "vue";
 import { storeToRefs } from "pinia";
@@ -6,7 +6,6 @@ import UserListSkeleton from "./UserListSkeleton.vue";
 import { RouterLink } from "vue-router";
 
 export default defineComponent({
-  name: "UserListComponent",
   components: {
     UserListSkeleton,
     RouterLink,
